@@ -281,16 +281,19 @@ function SearchPage({ categories }: { categories: string[] }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const url = "/api/search?q=" + encodeURIComponent(query) + "&category=" + encodeURIComponent(category);
-    fetchJson<SearchPayload>(url)
-      .then((payload) => {
-        setResults(payload.results);
-        setCount(payload.count);
-      })
-      .catch(() => {
-        setResults([]);
-        setCount(0);
-      });
+    const timer = setTimeout(() => {
+      const url = "/api/search?q=" + encodeURIComponent(query) + "&category=" + encodeURIComponent(category);
+      fetchJson<SearchPayload>(url)
+        .then((payload) => {
+          setResults(payload.results);
+          setCount(payload.count);
+        })
+        .catch(() => {
+          setResults([]);
+          setCount(0);
+        });
+    }, 300);
+    return () => clearTimeout(timer);
   }, [query, category]);
 
   return (
