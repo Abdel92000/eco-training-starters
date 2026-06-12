@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Link, NavLink, Route, Routes, useParams } from 'react-router-dom';
+import { useEffect, useMemo, useState } from "react";
+import { Link, NavLink, Route, Routes, useParams } from "react-router-dom";
 
 type Product = {
   id: string;
@@ -55,16 +55,16 @@ type SearchPayload = { count: number; results: Product[] };
 async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error('Echec sur ' + url);
+    throw new Error("Echec sur " + url);
   }
   return response.json() as Promise<T>;
 }
 
 function formatPrice(value: number) {
-  return new Intl.NumberFormat('fr-FR', {
-    style: 'currency',
-    currency: 'EUR',
-    maximumFractionDigits: 0
+  return new Intl.NumberFormat("fr-FR", {
+    style: "currency",
+    currency: "EUR",
+    maximumFractionDigits: 0,
   }).format(value);
 }
 
@@ -99,7 +99,7 @@ function ProductCard({ product }: { product: Product }) {
         <p>{product.shortDescription}</p>
         <div className="shop-product-footer">
           <strong>{formatPrice(product.price)}</strong>
-          <Link to={'/products/' + product.id}>Voir la fiche</Link>
+          <Link to={"/products/" + product.id}>Voir la fiche</Link>
         </div>
       </div>
     </article>
@@ -107,17 +107,7 @@ function ProductCard({ product }: { product: Product }) {
 }
 
 function HomePage({ home }: { home: HomePayload }) {
-  const [promos, setPromos] = useState(home.promos);
-
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      fetchJson<{ promos: HomePayload['promos'] }>('/api/promotions')
-        .then((payload) => setPromos(payload.promos))
-        .catch(() => undefined);
-    }, 5000);
-
-    return () => window.clearInterval(timer);
-  }, []);
+  const promos = home.promos;
 
   return (
     <div className="shop-stack">
@@ -197,14 +187,20 @@ function ProductDetailPage({ products }: { products: Product[] }) {
       return;
     }
 
-    fetchJson<ProductDetail>('/api/products/' + id).then(setDetail).catch(() => setDetail(null));
+    fetchJson<ProductDetail>("/api/products/" + id)
+      .then(setDetail)
+      .catch(() => setDetail(null));
   }, [id]);
 
   const current = detail ?? products.find((product) => product.id === id) ?? products[0];
   const recommended = current ? products.filter((product) => current.recommendations.includes(product.id)) : [];
 
   if (!current) {
-    return <main className="shop-stack"><p>Produit introuvable.</p></main>;
+    return (
+      <main className="shop-stack">
+        <p>Produit introuvable.</p>
+      </main>
+    );
   }
 
   return (
@@ -244,7 +240,7 @@ function ProductDetailPage({ products }: { products: Product[] }) {
           <div className="shop-stock-bars">
             {detail.stockHistory.map((point) => (
               <div key={point.day} className="shop-stock-item">
-                <span style={{ height: point.stock * 2 + 'px' }} />
+                <span style={{ height: point.stock * 2 + "px" }} />
                 <small>{point.day}</small>
               </div>
             ))}
@@ -279,13 +275,13 @@ function ProductDetailPage({ products }: { products: Product[] }) {
 }
 
 function SearchPage({ categories }: { categories: string[] }) {
-  const [query, setQuery] = useState('');
-  const [category, setCategory] = useState('');
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("");
   const [results, setResults] = useState<Product[]>([]);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const url = '/api/search?q=' + encodeURIComponent(query) + '&category=' + encodeURIComponent(category);
+    const url = "/api/search?q=" + encodeURIComponent(query) + "&category=" + encodeURIComponent(category);
     fetchJson<SearchPayload>(url)
       .then((payload) => {
         setResults(payload.results);
@@ -305,11 +301,17 @@ function SearchPage({ categories }: { categories: string[] }) {
           <h1>Trouver une reference</h1>
         </div>
         <div className="shop-search-controls">
-          <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Nom, collection ou mot-cle" />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Nom, collection ou mot-cle"
+          />
           <select value={category} onChange={(event) => setCategory(event.target.value)}>
             <option value="">Toutes les categories</option>
             {categories.map((item) => (
-              <option key={item} value={item}>{item}</option>
+              <option key={item} value={item}>
+                {item}
+              </option>
             ))}
           </select>
         </div>
@@ -366,7 +368,11 @@ function CartPage({ cart }: { cart: CartPayload }) {
 
 function CheckoutPage({ checkout }: { checkout: CheckoutPayload | null }) {
   if (!checkout) {
-    return <main className="shop-stack"><p>Chargement de la commande...</p></main>;
+    return (
+      <main className="shop-stack">
+        <p>Chargement de la commande...</p>
+      </main>
+    );
   }
 
   return (
@@ -434,10 +440,10 @@ export default function ShopApp() {
 
   useEffect(() => {
     Promise.all([
-      fetchJson<HomePayload>('/api/shop/home'),
-      fetchJson<Product[]>('/api/products'),
-      fetchJson<CartPayload>('/api/cart'),
-      fetchJson<CheckoutPayload>('/api/checkout')
+      fetchJson<HomePayload>("/api/shop/home"),
+      fetchJson<Product[]>("/api/products"),
+      fetchJson<CartPayload>("/api/cart"),
+      fetchJson<CheckoutPayload>("/api/checkout"),
     ]).then(([homePayload, productPayload, cartPayload, checkoutPayload]) => {
       setHome(homePayload);
       setProducts(productPayload);
@@ -450,7 +456,11 @@ export default function ShopApp() {
   const cartCount = cart ? cart.items.reduce((total, item) => total + item.quantity, 0) : 0;
 
   if (!home || !cart) {
-    return <main className="shop-app"><p className="shop-loading">Chargement de la boutique...</p></main>;
+    return (
+      <main className="shop-app">
+        <p className="shop-loading">Chargement de la boutique...</p>
+      </main>
+    );
   }
 
   return (
