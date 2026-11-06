@@ -5,6 +5,8 @@
 **TennisFlash** est un service de collecte et livraison de raquettes de tennis pour le cordage à Paris.
 Le parcours utilisateur principal est : commande en ligne → paiement Stripe → suivi de la demande.
 
+**Unité fonctionnelle :** Commander un cordage de raquette en ligne, du choix de la prestation jusqu'au paiement.
+
 **Catégorie retenue :** E-commerce / catalogue / réservation
 **Repo miroir associé :** heavy-shop
 

@@ -13,7 +13,7 @@ type Product = {
   shortDescription: string;
   longDescription: string;
   specs: Array<{ label: string; value: string }>;
-  duplicateMarketingCopy: string[];
+  duplicateMarketingCopy: string;
   recommendations: string[];
 };
 
@@ -224,9 +224,7 @@ function ProductDetailPage({ products }: { products: Product[] }) {
             <span>{current.stock} en stock</span>
           </div>
           <div className="shop-copy-list">
-            {current.duplicateMarketingCopy.map((item, index) => (
-              <p key={item + index}>{item}</p>
-            ))}
+            <p>{current.duplicateMarketingCopy}</p>
           </div>
         </article>
       </section>

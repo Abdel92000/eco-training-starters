@@ -49,17 +49,8 @@
         "value": "Valeur detaillee 1-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-2",
-      "product-3",
-      "product-4"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-2", "product-3", "product-4"]
   },
   {
     "id": "product-2",
@@ -111,17 +102,8 @@
         "value": "Valeur detaillee 2-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-3",
-      "product-4",
-      "product-5"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-3", "product-4", "product-5"]
   },
   {
     "id": "product-3",
@@ -173,17 +155,8 @@
         "value": "Valeur detaillee 3-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-4",
-      "product-5",
-      "product-6"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-4", "product-5", "product-6"]
   },
   {
     "id": "product-4",
@@ -235,17 +208,8 @@
         "value": "Valeur detaillee 4-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-5",
-      "product-6",
-      "product-7"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-5", "product-6", "product-7"]
   },
   {
     "id": "product-5",
@@ -297,17 +261,8 @@
         "value": "Valeur detaillee 5-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-6",
-      "product-7",
-      "product-8"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-6", "product-7", "product-8"]
   },
   {
     "id": "product-6",
@@ -359,17 +314,8 @@
         "value": "Valeur detaillee 6-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-7",
-      "product-8",
-      "product-9"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-7", "product-8", "product-9"]
   },
   {
     "id": "product-7",
@@ -421,17 +367,8 @@
         "value": "Valeur detaillee 7-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-8",
-      "product-9",
-      "product-10"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-8", "product-9", "product-10"]
   },
   {
     "id": "product-8",
@@ -483,17 +420,8 @@
         "value": "Valeur detaillee 8-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-9",
-      "product-10",
-      "product-1"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-9", "product-10", "product-1"]
   },
   {
     "id": "product-9",
@@ -545,17 +473,8 @@
         "value": "Valeur detaillee 9-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-10",
-      "product-1",
-      "product-2"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-10", "product-1", "product-2"]
   },
   {
     "id": "product-10",
@@ -607,16 +526,7 @@
         "value": "Valeur detaillee 10-8"
       }
     ],
-    "duplicateMarketingCopy": [
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
-      "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus."
-    ],
-    "recommendations": [
-      "product-1",
-      "product-2",
-      "product-3"
-    ]
+    "duplicateMarketingCopy": "Livraison suivie, selection en stock, service client disponible et conseils d installation inclus.",
+    "recommendations": ["product-1", "product-2", "product-3"]
   }
 ]
